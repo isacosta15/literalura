@@ -64,40 +64,60 @@ Essa API fornece informações sobre livros do **Projeto Gutenberg**, incluindo:
     
 
 Exemplo de endpoint utilizado:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   https://gutendex.com/books/?search=dom+casmurro   `
+https://gutendex.com/books/?search=dom+casmurro
 
 📂 Estrutura do Projeto
 =======================
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   literalura│├── src│   ├── main│   │   ├── java│   │   │   └── com.literalura│   │   │       ├── model│   │   │       ├── repository│   │   │       ├── service│   │   │       ├── dto│   │   │       └── principal│   │   ││   │   └── resources│   │       ├── application.properties│   │├── pom.xml└── README.md   `
+literalura
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.literalura
+│   │   │       ├── model
+│   │   │       ├── repository
+│   │   │       ├── service
+│   │   │       ├── dto
+│   │   │       └── principal
+│   │   │
+│   │   └── resources
+│   │       ├── application.properties
+│   │
+├── pom.xml
+└── README.md
 
 ⚙️ Configuração do Projeto
 ==========================
 
 ### 1️⃣ Clonar o repositório
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone https://github.com/seu-usuario/literalura.git   `
+git clone https://github.com/seu-usuario/literalura.git
 
 Entrar na pasta do projeto:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cd literalura   `
+cd literalura`
 
 ### 2️⃣ Configurar o banco de dados
 
 No arquivo **application.properties** configure seu banco:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   spring.datasource.url=jdbc:postgresql://localhost:5432/literaluraspring.datasource.username=seu_usuariospring.datasource.password=sua_senhaspring.jpa.hibernate.ddl-auto=updatespring.jpa.show-sql=true   `
+spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true`
 
 ### 3️⃣ Instalar dependências
 
 Se estiver usando Maven:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   mvn install   `
+mvn install`
 
 ### 4️⃣ Executar o projeto
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   mvn spring-boot:run   `
+mvn spring-boot:run`
 
 Ou execute pela sua IDE (IntelliJ / VSCode).
 
@@ -106,7 +126,12 @@ Ou execute pela sua IDE (IntelliJ / VSCode).
 
 Ao executar a aplicação, será exibido um **menu interativo no console** com opções como:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   1 - Buscar livro pelo título2 - Listar livros registrados3 - Listar autores registrados4 - Listar autores vivos em determinado ano5 - Listar livros por idioma0 - Sair   `
+1 - Buscar livro pelo título
+2 - Listar livros registrados
+3 - Listar autores registrados
+4 - Listar autores vivos em determinado ano
+5 - Listar livros por idioma
+0 - Sair
 
 Basta selecionar a opção desejada e seguir as instruções.
 
@@ -115,11 +140,16 @@ Basta selecionar a opção desejada e seguir as instruções.
 
 Entrada:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Digite o nome do livro:Dom Casmurro   `
+Digite o nome do livro:
+Dom Casmurro`
 
 Saída:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Livro encontrado:Título: Dom CasmurroAutor: Machado de AssisIdioma: ptDownloads: 5421   `
+Livro encontrado:
+Título: Dom Casmurro
+Autor: Machado de Assis
+Idioma: pt
+Downloads: 5421  `
 
 🧠 Conceitos aplicados
 ======================
@@ -160,8 +190,8 @@ Algumas melhorias que podem ser implementadas:
 👩‍💻 Autora
 ============
 
-Desenvolvido por **Bela**
+Desenvolvido por **Isabela**
 
-📎 GitHub: 
+📎 GitHub: https://github.com/isacosta15
 
-📎 LinkedIn:
+📎 LinkedIn: https://www.linkedin.com/in/isabela-nunes-dev/
